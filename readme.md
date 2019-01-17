@@ -1,5 +1,5 @@
 # React Pokemon Wiki
 
-App em React para consumir a API pública de Pokemons, a [PokéAPI](https://pokeapi.co/), e criar uma Wiki.
+Aplicação em formato de Wiki com base na [PokéAPI](https://pokeapi.co/). 
 
 Projeto criado para fins de estudo.
