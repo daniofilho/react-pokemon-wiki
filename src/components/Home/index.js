@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-import logo from 'assets/images/logo.svg';
-
 import Header from 'components/Shared/Header';
+import './Home.scss';
 
 // Reacstrap
 import {
@@ -19,29 +18,68 @@ export default class Home extends Component {
                 <Header />
 
                 <Container>
+                    
                     <Row>
-                        <Col lg="12" className="text-center">
-                            
-                            <div className="App-header">
-                                
-                                <img src={logo} className="App-logo" alt="logo" />
-                                
-                                <p>
-                                    Edit <code>src/App.js</code> and save to reload.
-                                </p>
-                                <a
-                                    className="App-link"
-                                    href="https://reactjs.org"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Learn React
-                                </a>
 
-                            </div>{/* .App-Header */}
+                        <Col>
+
+                            <h1 className="page-title text-center">React Pokémon Wiki</h1>
+
+                            <div className="balloon nes-container no-border">
+
+                                <div className="messages">
+
+                                    <div className="message -left">
+                                        
+                                        <i className="nes-ash"></i>
+                                        
+                                        <div className="nes-balloon from-left">
+                                            
+                                        
+                                            <p>Welcome to React Pokémon Wiki!</p>
+
+                                            <p>
+                                                This is a simple project created in React to get Pokémons from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.
+                                            </p>
+
+                                            <p>
+                                                Here you can start browsing the list of Pokémons or you can see which is your random Pokémon for today.
+                                            </p>
+
+                                            <p>(can you find a Mewtwo?)</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                        </Col>
+                            
+                    </Row>
+
+                    <Row className="mt-4">
+                        
+                        <Col md="6" className="text-center">
+
+                            <a href="/pokemons" className="nes-btn is-warning">
+                                Pokémons List
+                            </a>
 
                         </Col>
+
+                        <Col md="6" className="text-center">
+
+                            <a href="/pokemon" className="nes-btn is-error">
+                                Random Pokémon
+                            </a>
+
+                        </Col>
+                                 
                     </Row>
+
                 </Container>
 
             </div>

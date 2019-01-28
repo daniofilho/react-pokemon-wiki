@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // Assets
 import 'assets/assets-import';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'nes.css/css/nes.css';
 
 // Componentes
 import Home     from "./Home";

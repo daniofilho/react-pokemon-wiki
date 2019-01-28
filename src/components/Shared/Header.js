@@ -35,7 +35,7 @@ export default class Header extends Component {
                     
                     <Container>
                         
-                        <NavbarBrand  href="/">React Pokemon Wiki</NavbarBrand>
+                        <NavbarBrand  href="/">React Pokémon Wiki</NavbarBrand>
                         
                         <NavbarToggler onClick={this.toggle} />
                         
@@ -51,11 +51,7 @@ export default class Header extends Component {
                                 </NavItem>
 
                                 <NavItem>
-                                    <NavLink href="/pokemons">Pokemons</NavLink>
-                                </NavItem>
-
-                                <NavItem>
-                                    <NavLink href="/pokemon">Pokemon</NavLink>
+                                    <NavLink href="/pokemons">Pokémons</NavLink>
                                 </NavItem>
 
                             </Nav>
