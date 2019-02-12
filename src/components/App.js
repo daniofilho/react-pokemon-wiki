@@ -16,12 +16,12 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <React.Fragment>
                     <Route exact path="/"   component={Home} />
                     <Route path="/pokemons" component={Pokemons}/> 
                     <Route path="/pokemon"  component={Pokemon}/>
-                </div>
-            </Router>
+                </React.Fragment>
+            </Router>  
         );
     }
 }

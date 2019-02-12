@@ -99,7 +99,7 @@ export default class Pokemons extends Component {
                     <Row className="mt-4 mb-4">
                         <Col>
                             <a href="#!" class="nes-btn">
-                                Previus Page
+                                Previous Page
                             </a>
                         </Col>
 

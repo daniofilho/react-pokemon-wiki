@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Contexts API
+import { AppContext } from "components/Contexts/App";
+
 import {
     Container, 
     Collapse,
@@ -35,7 +38,18 @@ export default class Header extends Component {
                     
                     <Container>
                         
-                        <NavbarBrand  href="/">React Pokémon Wiki</NavbarBrand>
+                        <NavbarBrand  href="/">
+                            React Pokémon Wiki
+                            - <small>
+                                <AppContext.Provider>
+                                    {(context) => (
+                                        <React.Fragment>
+                                            {context.state.page_title}
+                                        </React.Fragment>
+                                    )}
+                                </AppContext.Provider>
+                            </small>
+                        </NavbarBrand>
                         
                         <NavbarToggler onClick={this.toggle} />
                         
