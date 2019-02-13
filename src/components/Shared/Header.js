@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Contexts API
-import { ConfigContext } from "stores/ConfigStore";
+import { UIContext } from "stores/UIStore";
 
 import {
     Container, 
@@ -14,28 +14,13 @@ import {
 
 export default class Header extends Component {
 
-    // Toggle do Navbar Toggler
-    constructor(props) {
-        super(props);
-    
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
-    }
-    toggle() {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-    }
-    
     render() {
         return (
             
-            <ConfigContext.Consumer>
+            <UIContext.Consumer>
                 
-                { ConfigStore => (
-            
+                { UI => (
+                    
                     <div className="component-Header">
 
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -44,13 +29,11 @@ export default class Header extends Component {
                                 
                                 <NavbarBrand  href="/">
                                     React Pokémon Wiki
-                                    - <small>{ConfigStore.page_title}</small>
-                                    <button onClick={ConfigStore.set_page_title('Bingo!')} >Change</button>
                                 </NavbarBrand>
-                                
-                                <NavbarToggler onClick={this.toggle} />
-                                
-                                <Collapse isOpen={this.state.isOpen} navbar>
+                        
+                                <NavbarToggler onClick={UI.actions.toggle_menu} />
+                            
+                                <Collapse isOpen={UI.store.is_menu_open} navbar>
                                     
                                     <Nav className="ml-auto" navbar>
                                         
@@ -76,7 +59,7 @@ export default class Header extends Component {
                     </div>
                 )}
             
-            </ConfigContext.Consumer>
+            </UIContext.Consumer>
                
         );
     }
