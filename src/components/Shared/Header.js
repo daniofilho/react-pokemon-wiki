@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Contexts API
 <<<<<<< HEAD
 import { AppContext } from "components/Contexts/App";
@@ -8,6 +9,8 @@ import { AppContext } from "components/Contexts/App";
 import { ConfigContext } from "stores/ConfigStore";
 >>>>>>> parent of 483cd8e... bkp
 
+=======
+>>>>>>> parent of 58a753c... tentando implementar context api
 =======
 >>>>>>> parent of 58a753c... tentando implementar context api
 import {

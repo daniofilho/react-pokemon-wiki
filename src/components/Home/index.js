@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import Header from 'components/Shared/Header';
 import './Home.scss';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of 58a753c... tentando implementar context api
 // Reacstrap
 import {
     Container, 
