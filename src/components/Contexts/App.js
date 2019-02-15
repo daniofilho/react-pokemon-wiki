@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 // primeiro é necessário criar um Context
-export const ConfigContext = React.createContext({});
+export const AppContext = React.createContext({});
 
 // Then create a provider Component
-export class ConfigProvider extends Component {
+export class AppProvider extends Component {
 
     state = {
         page_title: "Lorem Ipsum",
@@ -15,12 +15,12 @@ export class ConfigProvider extends Component {
         }
     }
     
+    // É necessário criar um compoente com a propriedade value e passar o objeto de valores e funções pra ele
     render() {
         return (
-            <ConfigContext.Provider value={ this.state }>
-                {this.props.children}
-            </ConfigContext.Provider>
+            <AppContext.Provider 
+                value={ { state: this.state } }>
+            </AppContext.Provider>
         )
     }
-
 }
