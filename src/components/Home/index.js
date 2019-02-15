@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import Header from 'components/Shared/Header';
 import './Home.scss';
 
-// Contexts API
-import { AppProvider } from "components/Contexts/App";
-
 // Reacstrap
 import {
     Container, 
@@ -16,82 +13,76 @@ export default class Home extends Component {
 
     render() {
         return (
-            
             <div className="container-Home">
 
-                <AppProvider>
+                <Header />
 
-                    <Header />
+                <Container>
+                    
+                    <Row>
 
-                    <Container>
-                        
-                        <Row>
+                        <Col>
 
-                            <Col>
+                            <h1 className="page-title text-center">React Pokémon Wiki</h1>
 
-                                <h1 className="page-title text-center">React Pokémon Wiki</h1>
+                            <div className="balloon nes-container no-border">
 
-                                <div className="balloon nes-container no-border">
+                                <div className="messages">
 
-                                    <div className="messages">
-
-                                        <div className="message -left">
+                                    <div className="message -left">
+                                        
+                                        <i className="nes-ash"></i>
+                                        
+                                        <div className="nes-balloon from-left">
                                             
-                                            <i className="nes-ash"></i>
-                                            
-                                            <div className="nes-balloon from-left">
-                                                
-                                            
-                                                <p>Welcome to React Pokémon Wiki!</p>
+                                        
+                                            <p>Welcome to React Pokémon Wiki!</p>
 
-                                                <p>
-                                                    This is a simple project created in React to get Pokémons from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.
-                                                </p>
+                                            <p>
+                                                This is a simple project created in React to get Pokémons from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.
+                                            </p>
 
-                                                <p>
-                                                    Here you can start browsing the list of Pokémons or you can see which is your random Pokémon for today.
-                                                </p>
+                                            <p>
+                                                Here you can start browsing the list of Pokémons or you can see which is your random Pokémon for today.
+                                            </p>
 
-                                                <p>(can you find a Mewtwo?)</p>
-
-                                            </div>
+                                            <p>(can you find a Mewtwo?)</p>
 
                                         </div>
 
                                     </div>
 
                                 </div>
-                                
-                            </Col>
-                                
-                        </Row>
 
-                        <Row className="mt-4">
+                            </div>
                             
-                            <Col md="6" className="text-center">
+                        </Col>
+                            
+                    </Row>
 
-                                <a href="/pokemons" className="nes-btn is-warning">
-                                    Pokémons List
-                                </a>
+                    <Row className="mt-4">
+                        
+                        <Col md="6" className="text-center">
 
-                            </Col>
+                            <a href="/pokemons" className="nes-btn is-warning">
+                                Pokémons List
+                            </a>
 
-                            <Col md="6" className="text-center">
+                        </Col>
 
-                                <a href="/pokemon" className="nes-btn is-error">
-                                    Random Pokémon
-                                </a>
+                        <Col md="6" className="text-center">
 
-                            </Col>
-                                    
-                        </Row>
+                            <a href="/pokemon" className="nes-btn is-error">
+                                Random Pokémon
+                            </a>
 
-                    </Container>
+                        </Col>
+                                 
+                    </Row>
 
-                </AppProvider>
+                </Container>
 
             </div>
-
         );
     }
 

@@ -23,10 +23,11 @@ class App extends Component {
         return (
 <<<<<<< HEAD
             <Router>
-                <React.Fragment>
+                <div>
                     <Route exact path="/"   component={Home} />
                     <Route path="/pokemons" component={Pokemons}/> 
                     <Route path="/pokemon"  component={Pokemon}/>
+<<<<<<< HEAD
                 </React.Fragment>
             </Router>  
 =======
@@ -40,6 +41,10 @@ class App extends Component {
                 </Router>  
             </ConfigProvider>
 >>>>>>> parent of 483cd8e... bkp
+=======
+                </div>
+            </Router>
+>>>>>>> parent of 58a753c... tentando implementar context api
         );
     }
 }

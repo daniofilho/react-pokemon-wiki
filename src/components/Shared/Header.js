@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+<<<<<<< HEAD
 // Contexts API
 <<<<<<< HEAD
 import { AppContext } from "components/Contexts/App";
@@ -7,6 +8,8 @@ import { AppContext } from "components/Contexts/App";
 import { ConfigContext } from "stores/ConfigStore";
 >>>>>>> parent of 483cd8e... bkp
 
+=======
+>>>>>>> parent of 58a753c... tentando implementar context api
 import {
     Container, 
     Collapse,
@@ -43,18 +46,7 @@ export default class Header extends Component {
                     
                     <Container>
                         
-                        <NavbarBrand  href="/">
-                            React Pokémon Wiki
-                            - <small>
-                                <AppContext.Provider>
-                                    {(context) => (
-                                        <React.Fragment>
-                                            {context.state.page_title}
-                                        </React.Fragment>
-                                    )}
-                                </AppContext.Provider>
-                            </small>
-                        </NavbarBrand>
+                        <NavbarBrand  href="/">React Pokémon Wiki</NavbarBrand>
                         
                         <NavbarToggler onClick={this.toggle} />
                         
