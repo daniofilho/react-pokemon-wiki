@@ -11,10 +11,17 @@ import Home     from "./Home";
 import Pokemons from "./Pokemons";
 import Pokemon  from "./Pokemon";
 
+<<<<<<< HEAD
+=======
+// Contexts API
+import { ConfigProvider } from "stores/ConfigStore";
+
+>>>>>>> parent of 483cd8e... bkp
 class App extends Component {
 
     render() {
         return (
+<<<<<<< HEAD
             <Router>
                 <React.Fragment>
                     <Route exact path="/"   component={Home} />
@@ -22,6 +29,17 @@ class App extends Component {
                     <Route path="/pokemon"  component={Pokemon}/>
                 </React.Fragment>
             </Router>  
+=======
+            <ConfigProvider>
+                <Router>
+                    <Switch>
+                        <Route exact path="/"   component={Home} />
+                        <Route path="/pokemons" component={Pokemons}/> 
+                        <Route path="/pokemon"  component={Pokemon}/>
+                    </Switch>
+                </Router>  
+            </ConfigProvider>
+>>>>>>> parent of 483cd8e... bkp
         );
     }
 }

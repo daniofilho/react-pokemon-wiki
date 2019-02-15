@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 // Contexts API
+<<<<<<< HEAD
 import { AppContext } from "components/Contexts/App";
+=======
+import { ConfigContext } from "stores/ConfigStore";
+>>>>>>> parent of 483cd8e... bkp
 
 import {
     Container, 
@@ -32,6 +36,7 @@ export default class Header extends Component {
     render() {
         return (
             
+<<<<<<< HEAD
             <div className="component-Header">
 
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -63,6 +68,36 @@ export default class Header extends Component {
                                         <span className="sr-only">(current)</span>
                                     </NavLink>
                                 </NavItem>
+=======
+            <ConfigContext.Consumer>
+                
+                { ConfigStore => (
+            
+                    <div className="component-Header">
+
+                        <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                            
+                            <Container>
+                                
+                                <NavbarBrand  href="/">
+                                    React Pokémon Wiki
+                                    - <small>{ConfigStore.page_title}</small>
+                                    <button onClick={ConfigStore.set_page_title('Bingo!')} >Change</button>
+                                </NavbarBrand>
+                                
+                                <NavbarToggler onClick={this.toggle} />
+                                
+                                <Collapse isOpen={this.state.isOpen} navbar>
+                                    
+                                    <Nav className="ml-auto" navbar>
+                                        
+                                        <NavItem className="active">
+                                            <NavLink href="/">
+                                                Home
+                                                <span className="sr-only">(current)</span>
+                                            </NavLink>
+                                        </NavItem>
+>>>>>>> parent of 483cd8e... bkp
 
                                 <NavItem>
                                     <NavLink href="/pokemons">Pokémons</NavLink>
@@ -76,7 +111,15 @@ export default class Header extends Component {
 
                 </nav>
 
+<<<<<<< HEAD
             </div>
+=======
+                    </div>
+                )}
+            
+            </ConfigContext.Consumer>
+               
+>>>>>>> parent of 483cd8e... bkp
         );
     }
 
