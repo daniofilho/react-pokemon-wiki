@@ -1,7 +1,5 @@
-import React from 'react';
-
 import { ConfigProvider } from "stores/ConfigStore";
-import { UIProvider } from "stores/UIStore";
+import { UIrovider } from "stores/UIStore";
 
 export function AppProviders({children}) {
     return (

@@ -7,10 +7,7 @@ export const ConfigContext = React.createContext({});
 export class ConfigProvider extends Component {
 
     state = {
-        page_title: "Lorem Ipsum"
-    }
-
-    actions = {
+        page_title: "Lorem Ipsum",
         set_page_title: (_page_title) => {
             this.setState({
                 page_title: _page_title
@@ -19,12 +16,8 @@ export class ConfigProvider extends Component {
     }
     
     render() {
-
-        const store = this.state;
-        const actions = this.actions;
-
         return (
-            <ConfigContext.Provider value={ { store, actions } }>
+            <ConfigContext.Provider value={ this.state }>
                 {this.props.children}
             </ConfigContext.Provider>
         )

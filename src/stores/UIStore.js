@@ -5,24 +5,17 @@ export const UIContext = React.createContext({});
 export class UIProvider extends Component {
 
     state = {
-        is_menu_open: false
-    }
-
-    actions = {
-        toggle_menu: () => {
-            this.setState({ 
-                is_menu_open:  !this.state.is_menu_open
-            })            
+        mobile_menu_active: false,
+        toggle_mobile_menu: () => {
+            this.setState({
+                mobile_menu_active: (mobile_menu_active) ? false : true
+            })
         }
     }
     
     render() {
-
-        const store = this.state;
-        const actions = this.actions;
-
         return (
-            <UIContext.Provider value={ { store, actions } }>
+            <UIContext.Provider value={ this.state }>
                 {this.props.children}
             </UIContext.Provider>
         )

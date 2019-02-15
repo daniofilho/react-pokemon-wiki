@@ -12,12 +12,13 @@ import Pokemons from "./Pokemons";
 import Pokemon  from "./Pokemon";
 
 // Contexts API
-import { AppProviders } from "stores/Providers";
+import { ConfigProvider } from "stores/ConfigStore";
 
 class App extends Component {
+
     render() {
         return (
-            <AppProviders>
+            <ConfigProvider>
                 <Router>
                     <Switch>
                         <Route exact path="/"   component={Home} />
@@ -25,7 +26,7 @@ class App extends Component {
                         <Route path="/pokemon"  component={Pokemon}/>
                     </Switch>
                 </Router>  
-            </AppProviders>
+            </ConfigProvider>
         );
     }
 }
