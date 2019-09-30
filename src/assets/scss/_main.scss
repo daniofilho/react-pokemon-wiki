@@ -1,0 +1,39 @@
+
+/* Gerais */
+    img { max-width: 100%; }
+    .page-title {
+        margin: 50px 0;
+    }
+
+/* Ajustes NES Style Framework */
+
+    .nes-container.no-border {
+        &:after {
+            display: none;
+        }
+    }
+    .balloon.nes-container .messages {
+        display: flex;
+        flex-direction: column;
+    }
+    .balloon.nes-container .message {
+        display: flex;
+    }
+    .balloon.nes-container .message i {
+        align-self: flex-end;
+    }
+    .balloon.nes-container .message.-left {
+        align-self: flex-start;
+    }
+    .balloon.nes-container .message.-right {
+        align-self: flex-end;
+    }
+    .nes-ash {
+        width: 180px !important;
+        transform: scale(1) !important;
+    }
+    a.nes-btn {
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
